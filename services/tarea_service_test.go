@@ -20,7 +20,7 @@ func TestObtenerTareas(t *testing.T) {
 	assert.NotNil(t, tareas)
 }
 
-func TestActualizarTarea(t *testing.T) (primitive.ObjectID, error) {
+func TestActualizarTarea(t *testing.T) {
 	// Crear una tarea para actualizar
 	tarea := models.Tarea{
 		Titulo:      "Tarea para actualizar",
@@ -47,5 +47,4 @@ func TestActualizarTarea(t *testing.T) (primitive.ObjectID, error) {
 	InsertedID := result.InsertedID.(primitive.ObjectID)
 	err = ActualizarTarea(InsertedID.Hex(), tareaActualizada)
 	assert.NoError(t, err)
-	return InsertedID, err
 }
