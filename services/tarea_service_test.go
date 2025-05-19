@@ -14,6 +14,7 @@ import (
 )
 
 func TestObtenerTareas(t *testing.T) {
+	config.ConectarDB()
 	tareas, err := ObtenerTareas()
 
 	assert.NoError(t, err)
