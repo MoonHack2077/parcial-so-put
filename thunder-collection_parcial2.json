@@ -1,0 +1,69 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "parcial2",
+    "collectionId": "e685ba60-d2b5-4d6e-949d-a185cfc3cebf",
+    "dateExported": "2025-04-04T22:19:05.369Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "680ab35c-d1d9-4d6b-973b-d2a12dfb957b",
+            "colId": "e685ba60-d2b5-4d6e-949d-a185cfc3cebf",
+            "containerId": "",
+            "name": "GET",
+            "url": "http://localhost:8080/tareas",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2025-04-04T22:13:31.963Z",
+            "modified": "2025-04-04T22:17:00.002Z",
+            "headers": []
+        },
+        {
+            "_id": "4d76d7e8-e074-4d2d-a588-31ff39630c68",
+            "colId": "e685ba60-d2b5-4d6e-949d-a185cfc3cebf",
+            "containerId": "",
+            "name": "POST",
+            "url": "http://localhost:8080/tareas",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2025-04-04T22:13:48.498Z",
+            "modified": "2025-04-04T22:17:21.762Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"titulo\": \"Nueva tarea desde Thunder\",\n  \"descripcion\": \"Tarea creada con Thunder Client\",\n  \"completado\": false\n}\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "f541db9a-adfe-4878-afae-d072981bb272",
+            "colId": "e685ba60-d2b5-4d6e-949d-a185cfc3cebf",
+            "containerId": "",
+            "name": "PUT",
+            "url": "http://localhost:8080/tareas/67f05a74b1ace5da4b0812d3",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2025-04-04T22:14:02.127Z",
+            "modified": "2025-04-04T22:18:22.837Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"titulo\": \"Tarea actualizada desde Thunder\",\n  \"descripcion\": \"Actualización de prueba\",\n  \"completado\": true\n}\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "1aeff34e-3775-461e-8f38-b588e50d2ba3",
+            "colId": "e685ba60-d2b5-4d6e-949d-a185cfc3cebf",
+            "containerId": "",
+            "name": "DELETE",
+            "url": "http://localhost:8080/tareas/67f05a74b1ace5da4b0812d3",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2025-04-04T22:14:07.900Z",
+            "modified": "2025-04-04T22:18:42.894Z",
+            "headers": []
+        }
+    ],
+    "ref": "kyxZcYRmsqE6yGaukg8-rNOP6nSlIA6pqhPVndy74eXtPrsvj00Th4haIJTzdjikK1Cw51aJh0JZB6l8U0z0DA"
+}

@@ -1,0 +1,21 @@
+# Archivos de control
+.git
+.gitignore
+
+# Archivos locales
+*.log
+*.env
+coverage.out
+
+# Archivos del editor
+.vscode
+.idea
+.DS_Store
+
+# Binarios
+/app
+*.exe
+*.out
+
+# Pruebas
+*.test
