@@ -9,23 +9,6 @@ import (
 	"github.com/gorilla/mux"
 )
 
-func CrearTarea(w http.ResponseWriter, r *http.Request) {
-	var tarea models.Tarea
-	if err := json.NewDecoder(r.Body).Decode(&tarea); err != nil {
-		http.Error(w, "Datos inválidos", http.StatusBadRequest)
-		return
-	}
-
-	id, err := services.CrearTarea(tarea)
-	if err != nil {
-		http.Error(w, "No se pudo crear la tarea", http.StatusInternalServerError)
-		return
-	}
-
-	w.WriteHeader(http.StatusCreated)
-	json.NewEncoder(w).Encode(map[string]interface{}{"id": id.Hex()})
-}
-
 func ObtenerTareas(w http.ResponseWriter, r *http.Request) {
 	tareas, err := services.ObtenerTareas()
 	if err != nil {

@@ -26,7 +26,6 @@ func main() {
 	router := mux.NewRouter()
 
 	// Registrar endpoints
-	router.HandleFunc("/tareas", controllers.CrearTarea).Methods("POST")
 	router.HandleFunc("/tareas", controllers.ObtenerTareas).Methods("GET")
 	router.HandleFunc("/tareas/{id}", controllers.ActualizarTarea).Methods("PUT")
 

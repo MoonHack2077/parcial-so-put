@@ -2,7 +2,6 @@ package repositories
 
 import (
 	"context"
-	"fmt"
 	"time"
 
 	"github.com/MoonHack2077/parcial-so-put/config"
@@ -11,21 +10,6 @@ import (
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
-
-func CrearTarea(tarea models.Tarea) (primitive.ObjectID, error) {
-	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
-	defer cancel()
-
-	tarea.CreadoEn = time.Now()
-	collection := config.GetCollection("tareas")
-	result, err := collection.InsertOne(ctx, tarea)
-	if err != nil {
-		fmt.Println("Error al insertar tarea:", err)
-		return primitive.NilObjectID, err
-	}
-
-	return result.InsertedID.(primitive.ObjectID), nil
-}
 
 func ObtenerTodasTareas() ([]models.Tarea, error) {
 	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
